@@ -6,13 +6,13 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class EmployeesService{
-    private _url = "http://localhost:8000/employees"
+    private _url = "http://localhost:8000/employees/"
     
     constructor(private _http: Http){
     }
     
     getEmployees(){
         return this._http.get(this._url)
-            .map( res => res.json() );
+            .map( res => res.json().results );
     }
 }
