@@ -1,0 +1,26 @@
+<h1>Employees</h1>
+
+<div *ngIf="employees">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Employee No.</th>
+                <th>Birth date</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Gender</th>
+                <th>Hire date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{ employee.emp_no  }}</td>
+                <td>{{ employee.birth_date }}</td>
+                <td>{{ employee.first_name }}</td>
+                <td>{{ employee.last_name }}</td>
+                <td>{{ employee.gender }}</td>
+                <td>{{ employee.hire_date }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
