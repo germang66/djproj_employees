@@ -13,6 +13,10 @@ export class EmployeesService{
     
     getEmployees(){
         return this._http.get(this._url)
-            .map( res => res.json().results );
+            .map( res => {
+            	let result = res.json();
+            	console.log(result);
+            	return result;
+            } );
     }
 }
