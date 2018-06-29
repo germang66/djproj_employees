@@ -105,7 +105,7 @@ DATABASES = {
         'NAME': 'djapp_employees',
         'USER': 'django_app',
         'PASSWORD': 'django_app',
-        'HOST': '192.168.0.22',   # Or an IP Address that your DB is hosted on
+        'HOST': 'db',   # Or an IP Address that your DB is hosted on
         'PORT': '3306', 
     },
     'employees': {
@@ -113,7 +113,7 @@ DATABASES = {
         'NAME': 'employees',
         'USER': 'django_app',
         'PASSWORD': 'django_app',
-        'HOST': '192.168.0.22',   # Or an IP Address that your DB is hosted on
+        'HOST': 'db',   # Or an IP Address that your DB is hosted on
         'PORT': '3306', 
     }
 }
