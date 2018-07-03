@@ -3,12 +3,18 @@ version: '3'
 services:
   db:
     build: ./db-mysql/
+    environment:
+      MYSQL_ROOT_PASSWORD: ggp
+      MYSQL_DATABASE: local
+    command: --innodb-flush-method=O_DSYNC --innodb-use-native-aio=0 --log_bin=ON --server-id=master-01
+    ports:
+      - "3306:3306"
     volumes:
       - ./db-mysql/data:/var/lib/mysql
   web:
     build: ./django-app/
-    command: bash -c "python3 makemigrations
-      && python3 migrate
+    command: bash -c "python3 manage.py makemigrations
+      && python3 manage.py migrate
       && python3 manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
