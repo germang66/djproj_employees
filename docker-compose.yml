@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    build: ./db-mysql/
+    build: ./mysql-db/
     environment:
       MYSQL_ROOT_PASSWORD: ggp
       MYSQL_DATABASE: local
@@ -10,7 +10,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./db-mysql/data:/var/lib/mysql
+      - ./mysql-db/data:/var/lib/mysql
   web:
     build: ./django-app/
     command: bash -c "python3 manage.py makemigrations

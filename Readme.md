@@ -12,7 +12,7 @@ container.
 
 ## Backend
 
-* Django Framework and a API with Django REST Framework.
+* Django Framework and an API with Django REST Framework.
 
 ## Persistence
 
