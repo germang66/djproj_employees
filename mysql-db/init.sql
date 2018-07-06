@@ -1,5 +1,5 @@
 
-SOURCE /usr/sql/test_db-master/employees.sql;
+SOURCE /usr/sql/test_db/employees.sql;
 
 
 CREATE USER 'django_app'@'%' IDENTIFIED BY 'django_app';
