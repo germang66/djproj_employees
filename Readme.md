@@ -24,6 +24,7 @@ container.
 
 * (06/2018) docker configuration just for django app and mysql, angular app in
  todo list.
+* (07/2018) using django with gunicorn and nginx.
 
 # TODO
 
