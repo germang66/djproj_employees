@@ -16,9 +16,19 @@ services:
     command: bash -c "python3 manage.py makemigrations
       && python3 manage.py migrate
       && gunicorn djproj_employees.wsgi -b  0.0.0.0:8000"
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     volumes:
       - ./django-app:/app/
     depends_on:
       - db
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    links:
+      - web
+    ports:
+      - "80:80"
+    depends_on:
+      - web
