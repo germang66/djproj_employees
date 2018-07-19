@@ -6,7 +6,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class EmployeesService{
-    private _url = "http://localhost:8000/employees/"
+    private _url = "http://192.168.99.100/api/employees/"
     
     constructor(private _http: Http){
     }

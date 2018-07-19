@@ -28,7 +28,17 @@ services:
       - ./nginx:/etc/nginx/conf.d
     links:
       - web
+      - ng-app
     ports:
       - "80:80"
     depends_on:
       - web
+      - ng-app
+  ng-app:
+    build: ./ng-app/
+    command: npm start
+    expose:
+      - "4200"
+    volumes:
+      - ./ng-app:/app/
+      - /app/node_modules
