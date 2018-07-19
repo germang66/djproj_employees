@@ -16,9 +16,9 @@ container.
 
 ## Persistence
 
-* models and registers are from **https://github.com/datacharmer/test_db.git** 
-
-* more in mysql-db/Readme.md
+*  MySQL database
+*  Schema is from **https://github.com/datacharmer/test_db.git** 
+*  details to load schema in mysql-db/Readme.md
 
 # Change log
 
