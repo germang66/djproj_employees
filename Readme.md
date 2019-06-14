@@ -35,3 +35,11 @@ container.
 * Differente environment configuration. 
 * CI/CD 
 * ...
+
+# build, deploy and run the project
+
+```
+docker-compose up -d
+```
+
+* enter to docker machine ip port 8080
